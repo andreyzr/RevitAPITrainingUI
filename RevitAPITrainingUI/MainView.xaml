@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:RevitAPITrainingUI"
              mc:Ignorable="d" 
-             d:DesignHeight="150" d:DesignWidth="300"
+             d:Height="150" d:Width="300"
         Title="Идентификатор элемента">
     <StackPanel>
         <Label Content="Узнать ID элемента"
