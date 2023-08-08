@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+	<AddIn Type="Command">
+		<Assembly>"C:\RevitAPITraining\RevitAPITrainingFloatingList.dll"</Assembly>
+		<AddInId>19E65B67-FF78-4345-86D5-C12DD67E8050}</AddInId>
+		<FullClassName>RevitAPITrainingFloatingList.Main</FullClassName>
+		<VendorId>ADSK</VendorId>
+		<Text>Смена системы </Text>
+	</AddIn>
+</RevitAddIns>

@@ -15,7 +15,7 @@ namespace RevitAPITrainingId
     {
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
         {
-            var window=new MainView(commandData);//
+            var window = new MainView(commandData);
 
             window.ShowDialog();
 

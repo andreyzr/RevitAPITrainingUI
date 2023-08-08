@@ -15,9 +15,10 @@ namespace RevitAPITrainingFloatingList
     {
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
         {
-
             var window = new MainView(commandData);
+
             window.ShowDialog();
+
             return Result.Succeeded;
         }
     }

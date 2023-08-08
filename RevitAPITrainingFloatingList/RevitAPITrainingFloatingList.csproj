@@ -85,9 +85,12 @@
       <Name>RevitAPITrainingLibrary</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="RevitAPITrainingFloatingList.addin" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>
-    </PostBuildEvent>
+    <PostBuildEvent>xcopy "$(TargetDir)*.*" "C:\RevitAPITraining\" /y /i
+xcopy "$(ProjectDir)$(ProjectName).addin" "%25ProgramData%25\Autodesk\Revit\Addins\2021\" /y /i</PostBuildEvent>
   </PropertyGroup>
 </Project>
