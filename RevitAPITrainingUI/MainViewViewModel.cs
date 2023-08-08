@@ -16,11 +16,13 @@ namespace RevitAPITrainingUI
         private ExternalCommandData _commandData;
 
         public DelegateCommand SelectCommand { get;}
+        public List<Element> PikedObjects { get; private set; }
 
         public MainViewViewModel(ExternalCommandData commandData)
         {
             _commandData = commandData;
             SelectCommand = new DelegateCommand(OnSelectCommand);
+            PikedObjects = SelectionUtils.PickObjects(commandData);
         }
 
         public event EventHandler HideRequest;

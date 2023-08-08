@@ -7,6 +7,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RevitAPITrainingUI", "Revit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RevitAPITrainingLibrary", "..\RevitAPITrainingLibrary\RevitAPITrainingLibrary\RevitAPITrainingLibrary.csproj", "{E88A23B6-FF27-485F-82E7-8E302C5EB089}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RevitAPITrainingFloatingList", "RevitAPITrainingFloatingList\RevitAPITrainingFloatingList.csproj", "{58C19F0E-8523-4D1B-8FBD-BA91543D41E9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8DED06F4-90B1-42FD-8F1E-344E323B4ACE}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +28,10 @@ Global
 		{E88A23B6-FF27-485F-82E7-8E302C5EB089}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E88A23B6-FF27-485F-82E7-8E302C5EB089}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E88A23B6-FF27-485F-82E7-8E302C5EB089}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58C19F0E-8523-4D1B-8FBD-BA91543D41E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58C19F0E-8523-4D1B-8FBD-BA91543D41E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58C19F0E-8523-4D1B-8FBD-BA91543D41E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58C19F0E-8523-4D1B-8FBD-BA91543D41E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
