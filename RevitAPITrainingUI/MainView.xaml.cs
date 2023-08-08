@@ -14,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace RevitAPITrainingUI
+namespace RevitAPITrainingId
 {
     /// <summary>
     /// Логика взаимодействия для MainView.xaml

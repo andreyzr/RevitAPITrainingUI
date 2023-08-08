@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33717.318
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RevitAPITrainingUI", "RevitAPITrainingUI\RevitAPITrainingUI.csproj", "{66DF5A6A-FC2D-4098-8E01-38B0635C25A0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RevitAPITrainingId", "RevitAPITrainingUI\RevitAPITrainingId.csproj", "{66DF5A6A-FC2D-4098-8E01-38B0635C25A0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RevitAPITrainingLibrary", "..\RevitAPITrainingLibrary\RevitAPITrainingLibrary\RevitAPITrainingLibrary.csproj", "{E88A23B6-FF27-485F-82E7-8E302C5EB089}"
 EndProject

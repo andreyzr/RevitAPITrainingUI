@@ -7,8 +7,8 @@
     <ProjectGuid>{66DF5A6A-FC2D-4098-8E01-38B0635C25A0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RevitAPITrainingUI</RootNamespace>
-    <AssemblyName>RevitAPITrainingUI</AssemblyName>
+    <RootNamespace>RevitAPITrainingId</RootNamespace>
+    <AssemblyName>RevitAPITrainingId</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -209,7 +209,7 @@
     </None>
     <None Include="app.config" />
     <None Include="packages.config" />
-    <None Include="RevitAPITrainingUI.addin" />
+    <None Include="RevitAPITrainingId.addin" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\RevitAPITrainingLibrary\RevitAPITrainingLibrary\RevitAPITrainingLibrary.csproj">

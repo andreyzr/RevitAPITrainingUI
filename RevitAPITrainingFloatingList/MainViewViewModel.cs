@@ -1,4 +1,6 @@
-﻿using Autodesk.Revit.UI;
+﻿using Autodesk.Revit.DB;
+using Autodesk.Revit.DB.Plumbing;
+using Autodesk.Revit.UI;
 using Prism.Commands;
 using RevitAPITrainingLibrary;
 using System;
@@ -13,19 +15,52 @@ namespace RevitAPITrainingFloatingList
     {
         private ExternalCommandData _commandData;
 
+        public DelegateCommand SaveCommand { get; }
+        public List<Element> PickedObjects { get; } = new List<Element>();
+        public List<PipingSystemType> PipeSystems { get; } = new List<PipingSystemType>();
+
+        public PipingSystemType SelectedPipeSystem { get; set; }
+
         public MainViewViewModel(ExternalCommandData commandData)
         {
             _commandData = commandData;
-            SaveCommand=new DelegateCommand(OnSaveCommand);
-            PickedObjects = SelectionUtils.PickedObjects(commandData);
+            SaveCommand = new DelegateCommand(OnSaveCommand);
+            PickedObjects = SelectionUtils.PickObjects(commandData);
+            PipeSystems = PipesUtils.GetPipingSystems(commandData);
         }
 
         private void OnSaveCommand()
         {
-            throw new NotImplementedException();
+            UIApplication uiapp = _commandData.Application;
+            UIDocument uidoc = uiapp.ActiveUIDocument;
+            Document doc = uidoc.Document;
+
+            if (PickedObjects.Count == 0 || SelectedPipeSystem == null)
+                return;
+
+            using (var ts = new Transaction(doc, "Set system type"))
+            {
+                ts.Start();
+
+                foreach (var pickedObject in PickedObjects)
+                {
+                    if (pickedObject is Pipe)
+                    {
+                        var oPipe = pickedObject as Pipe;
+                        oPipe.SetSystemType(SelectedPipeSystem.Id);
+                    }
+                }
+
+                ts.Commit();
+            }
+
+            RaiseCloseRequest();
         }
 
-        public DelegateCommand SaveCommand { get; private set; }
-        public object PickedObjects { get; private set; }
+        public event EventHandler CloseRequest;
+        private void RaiseCloseRequest()
+        {
+            CloseRequest?.Invoke(this, EventArgs.Empty);
+        }
     }
 }
