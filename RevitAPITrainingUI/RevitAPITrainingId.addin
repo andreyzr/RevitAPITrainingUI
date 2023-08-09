@@ -2,7 +2,7 @@
 <RevitAddIns>
 	<AddIn Type="Command">
 		<Assembly>"C:\RevitAPITraining\RevitAPITrainingId.dll"</Assembly>
-		<AddInId>FAE7EF8E-23EA-4822-808B-5E9E9482AB1C</AddInId>
+		<AddInId>710B0F24-FD98-40CD-9B6E-03B9C9493635</AddInId>
 		<FullClassName>RevitAPITrainingId.Main</FullClassName>
 		<VendorId>ADSK</VendorId>
 		<Text>Вывод ID</Text>

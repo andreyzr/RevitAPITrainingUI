@@ -2,7 +2,7 @@
 <RevitAddIns>
 	<AddIn Type="Command">
 		<Assembly>"C:\RevitAPITraining\RevitAPITrainingFloatingList.dll"</Assembly>
-		<AddInId>19E65B67-FF78-4345-86D5-C12DD67E8050}</AddInId>
+		<AddInId>9722FBD0-FA50-4F54-8D3C-EC7CEBC65A0A</AddInId>
 		<FullClassName>RevitAPITrainingFloatingList.Main</FullClassName>
 		<VendorId>ADSK</VendorId>
 		<Text>Смена системы </Text>

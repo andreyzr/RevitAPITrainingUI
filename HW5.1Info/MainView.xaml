@@ -1,0 +1,20 @@
+﻿<Window x:Class="HW5._1Info.MainView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HW5._1Info"
+             mc:Ignorable="d" 
+             Height="150" Width="300"
+             Title="Информация о модели">
+    <StackPanel>
+        <Label Content="Выбор типа объектов"
+               Margin="5"/>
+        <Button Content="Колличество труб"
+                Command="{Binding PipeInfo}"/>        
+        <Button Content="Объем всех стен"
+                Command="{Binding WallInfo}"/>
+        <Button Content="Колличество дверей"
+                Command="{Binding DoorInfo}"/>
+    </StackPanel>
+</Window>
