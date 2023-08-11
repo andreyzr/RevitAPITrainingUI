@@ -15,13 +15,12 @@ namespace HW5._1Info
     {
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
         {
-            UIApplication uiapp = commandData.Application;
-            UIDocument uidoc = uiapp.ActiveUIDocument;
-            Document doc = uidoc.Document;
+            var window = new MainView(commandData);
 
-
+            window.ShowDialog();
 
             return Result.Succeeded;
+
         }
     }
 }
