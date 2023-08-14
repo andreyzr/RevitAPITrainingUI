@@ -1,6 +1,7 @@
 ﻿using Autodesk.Revit.DB;
 using Autodesk.Revit.DB.Plumbing;
 using Autodesk.Revit.UI;
+using Autodesk.Revit.UI.Selection;
 using Prism.Commands;
 using RevitAPITrainingLibrary;
 using System;
@@ -24,7 +25,7 @@ namespace HW5._1Info
         {
             _commandData = commandData;
             PipeInfo = new DelegateCommand(PipeCount);
-            WallInfo = new DelegateCommand(WallCount);
+            WallInfo = new DelegateCommand(WallVolume);
             DoorInfo = new DelegateCommand(DoorCount);
         }
         public event EventHandler HideRequest;
@@ -45,18 +46,23 @@ namespace HW5._1Info
 
             List<Pipe> lPipe = Info.GetPipes(_commandData);
 
-            TaskDialog.Show("Информация", $"Число труб:{lPipe.Count}");
+            TaskDialog.Show("Информация", $"Число труб: {lPipe.Count} шт.");
 
             RaiseShowRequest();
         }
 
-        private void WallCount()
+        private void WallVolume()
         {
             RaiseHideRequest();
-
+            double info = 0;
             List<Wall> lWall = Info.GetWalls(_commandData);
+            foreach (Wall wall in lWall)
+            {
+                Parameter parameter = wall.get_Parameter(BuiltInParameter.HOST_VOLUME_COMPUTED);
+                info +=UnitUtils.ConvertFromInternalUnits(parameter.AsDouble(),UnitTypeId.Meters)  ;
+            }
 
-            TaskDialog.Show("Информация", $"Число стен:{lWall.Count}");
+            TaskDialog.Show("Информация", $"Объем стен: {info:f2} м3");
 
             RaiseShowRequest();
         }
@@ -67,7 +73,7 @@ namespace HW5._1Info
 
             List<FamilyInstance> lDoors = Info.GetDoors(_commandData);
 
-            TaskDialog.Show("Информация", $"Число дверей:{lDoors.Count}");
+            TaskDialog.Show("Информация", $"Число дверей: {lDoors.Count} шт.");
 
             RaiseShowRequest();
         }

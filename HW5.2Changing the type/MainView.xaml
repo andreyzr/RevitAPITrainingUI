@@ -1,0 +1,13 @@
+﻿<Window x:Class="HW5._2Changing_the_type.MainView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HW5._2Changing_the_type"
+             mc:Ignorable="d" 
+             Height="150" Width="300"
+             Title="Изменение типа стены">
+    <Grid>
+            
+    </Grid>
+</Window>

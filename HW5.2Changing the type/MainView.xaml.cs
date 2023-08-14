@@ -1,5 +1,4 @@
-﻿using Autodesk.Revit.UI;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,19 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace RevitAPITrainingFloatingList
+namespace HW5._2Changing_the_type
 {
     /// <summary>
     /// Логика взаимодействия для MainView.xaml
     /// </summary>
     public partial class MainView : Window
     {
-        public MainView(ExternalCommandData commandData)
+        public MainView()
         {
             InitializeComponent();
-            MainViewViewModel vm = new MainViewViewModel(commandData);
-            vm.CloseRequest += (s, e) => this.Close();
-            DataContext = vm;
         }
     }
 }
