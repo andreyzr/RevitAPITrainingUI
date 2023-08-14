@@ -7,7 +7,14 @@
              mc:Ignorable="d" 
              Height="150" Width="300"
              Title="Изменение типа стены">
-    <Grid>
-            
-    </Grid>
+    <StackPanel>
+        <Label Content="Выбор типа стены"
+               Margin="5"/>
+        <ComboBox ItemsSource="{Binding WallTypes}"
+                  SelectedValue="{Binding SelectedType}"
+                  DisplayMemberPath="Name"
+                  Margin="5"/>
+        <Button Content="Применить"
+                Command="{Binding SaveCommand}"/>
+    </StackPanel>
 </Window>

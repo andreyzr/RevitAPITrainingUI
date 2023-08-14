@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{58C19F0E-8523-4D1B-8FBD-BA91543D41E9}</ProjectGuid>
+    <ProjectGuid>{2D1D0FFF-4284-4F74-8B21-A7EAC36ECC0D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RevitAPITrainingFloatingList</RootNamespace>
-    <AssemblyName>RevitAPITrainingFloatingList</AssemblyName>
+    <RootNamespace>RevitAPITrainingRiddonHW</RootNamespace>
+    <AssemblyName>RevitAPITrainingRiddonHW</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -64,33 +64,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
-    <Compile Include="MainView.xaml.cs">
-      <DependentUpon>MainView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="MainViewViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="MainView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="packages.config" />
+    <None Include="RevitAPITrainingRiddonHW.addin" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\..\RevitAPITrainingLibrary\RevitAPITrainingLibrary\RevitAPITrainingLibrary.csproj">
-      <Project>{E88A23B6-FF27-485F-82E7-8E302C5EB089}</Project>
-      <Name>RevitAPITrainingLibrary</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="RevitAPITrainingFloatingList.addin" />
+    <Content Include="Images\Pro.png" />
+    <Content Include="Images\Wall.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>
-    </PostBuildEvent>
+    <PostBuildEvent>xcopy "$(TargetDir)*.*" "C:\RevitAPITraining\" /y /i
+xcopy "$(ProjectDir)$(ProjectName).addin" "%25ProgramData%25\Autodesk\Revit\Addins\2021\" /y /i
+xcopy "$(ProjectDir)Images\*.*" "C:\RevitAPITraining\Images\" /y /i</PostBuildEvent>
   </PropertyGroup>
 </Project>

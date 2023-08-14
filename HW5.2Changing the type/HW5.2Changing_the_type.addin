@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Command">
+    <Assembly>"C:\RevitAPITraining\HW5.2Changing_the_type.dll"</Assembly>
+    <AddInId>C91E38CD-E887-4F36-8F8C-9074FF665BCC</AddInId>
+    <FullClassName>HW5._2Changing_the_type.Main</FullClassName>
+    <VendorId>ADSK</VendorId>
+    <Text>Смена типа стен</Text>
+  </AddIn>
+</RevitAddIns>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+	<AddIn Type="Command">
+		<Assembly>"C:\RevitAPITraining\HW5.1Info.dll"</Assembly>
+		<AddInId>2CE377AE-16EF-40B1-A3A5-39C6CEF4C75C</AddInId>
+		<FullClassName>HW5._1Info.Main</FullClassName>
+		<VendorId>ADSK</VendorId>
+		<Text>Сведения о семействах</Text>
+	</AddIn>
+</RevitAddIns>

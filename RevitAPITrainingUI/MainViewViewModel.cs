@@ -22,7 +22,6 @@ namespace RevitAPITrainingId
         {
             _commandData = commandData;
             SelectCommand = new DelegateCommand(OnSelectCommand);
-            PikedObjects = SelectionUtils.PickObjects(commandData);
         }
 
         public event EventHandler HideRequest;

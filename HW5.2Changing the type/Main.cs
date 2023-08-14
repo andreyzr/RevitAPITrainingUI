@@ -15,11 +15,9 @@ namespace HW5._2Changing_the_type
     {
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
         {
-            UIApplication uiapp = commandData.Application;
-            UIDocument uidoc = uiapp.ActiveUIDocument;
-            Document doc = uidoc.Document;
+            var window = new MainView(commandData);
 
-
+            window.ShowDialog();
 
             return Result.Succeeded;
         }
